@@ -1,16 +1,11 @@
-# This is a sample Python script.
+from user import User
+from post import Post
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+app_user_one = User("kimbo@gmail.com", "Kimbo", "1234", "DevOps Engineer")
+app_user_one.get_user_info()
 
+app_user_one.change_job_title("IT Manager")
+app_user_one.get_user_info()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+new_post = Post("on a secret mission today", app_user_one.name)
+new_post.get_post_info()
